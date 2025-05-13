@@ -6,7 +6,6 @@ const submitBtn = document.getElementById("submit");
 const formDiv = document.getElementById("form-div");
 const currentUser = localStorage.getItem("username");
 
-// 1️⃣ New-post form or “Log in to add a post” card
 function setupNewPostSection() {
   formDiv.innerHTML = ""; // clear anything inside
 
@@ -106,12 +105,14 @@ function displayPosts(posts) {
 
     // card
     const card = document.createElement("div");
-    card.className = "card h-100";
+    card.className = "card h-100 shadow-card";
 
     // image
     const img = document.createElement("img");
     img.src = item.imageUrl;
-    img.className = "card-img-top";
+    img.className = "card-img-top mx-auto";
+    img.style.height = "30rem";
+    img.style.objectFit = "cover";
 
     // body
     const body = document.createElement("div");
@@ -129,6 +130,7 @@ function displayPosts(posts) {
       delBtn.className = "btn btn-danger btn-sm align-self-end mb-2";
       delBtn.innerText = "Delete";
       delBtn.addEventListener("click", async () => {
+        if (!confirm("Are you sure you want to delete this post?")) return;
         await fetch(`${apiUrl}/${item.id}`, { method: "DELETE" });
         getPosts();
       });
@@ -152,6 +154,7 @@ function displayPosts(posts) {
         cDel.className = "btn btn-sm btn-outline-danger ms-2";
         cDel.innerText = "Delete";
         cDel.addEventListener("click", async () => {
+          if (!confirm("Are you sure you want to delete this comment?")) return;
           const updated = item.comments.filter((_, i) => i !== idx);
           await fetch(`${apiUrl}/${item.id}`, {
             method: "PUT",
@@ -218,4 +221,5 @@ function displayPosts(posts) {
   });
 }
 
+// kick things off
 getPosts();

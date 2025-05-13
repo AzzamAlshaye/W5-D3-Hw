@@ -1,7 +1,7 @@
 body {
-  background: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+  background-color: #e4ecef;
+  color: #000; /* make sure text is readable */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333333;
   padding-top: 3rem;
 }
 
@@ -48,28 +48,12 @@ body {
 
 /* hero section  */
 
-.container-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
-  height: 100%;
-}
 .form-div {
   display: flex;
   align-content: center;
   justify-content: center;
 }
-.user-card {
-  border-radius: 1rem;
-  background-color: #eaf0f3;
-  box-shadow: 0 1px 3px rgb(0, 0, 0); /* Subtle shadow */
-  border-radius: 4px;
-  text-align: center;
-  height: 20rem;
-  width: 15rem;
-}
+
 .form-card {
   border-radius: 1rem;
   display: flex;
@@ -85,179 +69,10 @@ body {
   height: 20rem;
   width: 30rem;
 }
-.user-card img {
-  width: 100%;
-  height: 60%;
-  margin-bottom: 0.5rem;
-}
-.user-card .name {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-}
-.user-card .text {
-  font-weight: bold;
-  color: #2c3e50;
-}
-.input-theme {
-  padding: 0.3rem;
-  border: rgb(67, 66, 66) solid 1px;
-  border-radius: 0.8rem;
+.shadow-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.492); /* Subtle shadow */
 }
 
-.product-card {
-  border-radius: 1rem;
-  background-color: #eaf0f3;
-  box-shadow: 0 1px 3px rgb(0, 0, 0); /* Subtle shadow */
-  border-radius: 4px;
-  padding: 0.5rem;
-  text-align: center;
-  height: 20rem;
-  width: 15rem;
-}
-.product-card img {
-  width: 100%;
-  height: 60%;
-  margin-bottom: 0.5rem;
-}
-.product-card .title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-}
-/* .product-card .price {
-  font-weight: bold;
-  color: #2c3e50;
-} */
-
-/* .todo-container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  max-width: 480px;
-  width: 100%;
-  padding: 2rem;
-}
-.header-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-h1 {
-  font-weight: 700;
-  font-size: 2.5rem;
-  color: #444444;
-}
-.task-actions button {
-  border: none;
-  background: transparent;
-  font-size: 1.1rem;
-  margin-left: 0.5rem;
-  transition: color 0.2s;
-}
-.input-group .form-control {
-  border-radius: 1rem;
-  border: none;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-#taskInput {
-  padding: 0.8rem;
-}
-.btn-primary {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border-radius: 10rem;
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  text-align: center;
-}
-.btn-primary:hover {
-  background: #574fce;
-}
-.btn-secondary {
-  background: transparent;
-  border: 2px solid #ff6584;
-  color: #ff6584;
-  border-radius: 2rem;
-  padding: 0.25rem 0.75rem;
-  transition: all 0.3s ease;
-}
-.btn-secondary:hover {
-  background: #ff6584;
-  color: #ffffff;
-}
-.task-count {
-  font-size: 0.9rem;
-  color: #777777;
-}
-.list-group {
-  padding: 0;
-  margin: 0;
-  margin-top: 1rem;
-}
-.task-item {
-  display: flex;
-  align-items: center;
-  background: #fafafa;
-  border: none;
-  border-radius: 0.75rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.75rem;
-  transition: transform 0.2s ease;
-}
-.task-item:hover {
-  transform: translateY(-2px);
-}
-.task-item input[type="checkbox"] {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-right: 0.75rem;
-  accent-color: #6c63ff;
-}
-.task-item span {
-  flex: 1;
-  font-size: 1rem;
-  word-break: break-word;
-}
-.task-done {
-  text-decoration: line-through;
-  color: #777777;
-}
-.task-actions button {
-  border: none;
-  background: transparent;
-  font-size: 1.1rem;
-  margin-left: 0.5rem;
-  transition: color 0.2s;
-}
-.task-actions .bi-pencil {
-  color: #ffca3a;
-}
-.task-actions .bi-trash {
-  color: #ff4585;
-}
-
-.task-actions button:hover {
-  opacity: 0.8;
-}
-#clearAllBtn {
-  margin-top: 1rem;
-}
-
-.img-icon {
-  height: 9rem;
-  width: 9rem;
-}
- */
 @media (max-width: 576px) {
   .form-card {
     padding: 1.5rem;

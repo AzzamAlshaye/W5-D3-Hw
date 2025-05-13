@@ -99,13 +99,36 @@
         </div>
       </div>
     </nav>
-    <section class="d-flex flex-column w-50 gap-2 m-auto">
-      <h2>add post</h2>
-      <input placeholder="add imageUrl" type="text" id="imageUrl" required />
-      <input placeholder="add text" type="text" id="postText" />
-      <button id="submit">post</button>
+
+    <div class="form-div">
+      <div class="form-card">
+        <label for="">text</label>
+        <input id="li-textarea" type="text" class="input-theme" required />
+        <label for="">image</label>
+        <input id="li-image" class="input-theme" required />
+        <button class="btn-main w-100 mb-2 fw-semibold" id="submit">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <section>
+      <div class="container-main" id="container-main"></div>
     </section>
-    <section id="posts-container"></section>
+
+    <!-- <div class="form-div">
+      <div class="form-card">
+        <label for="">name</label>
+        <input id="li-username" class="input-theme" required />
+        <label for="">text</label>
+        <input id="li-textarea" type="text" class="input-theme" required />
+        <label for="">image</label>
+        <input id="li-image" class="input-theme" required />
+        <button class="btn-main w-100 mb-2 fw-semibold" id="btnSubmit">
+          Submit
+        </button>
+      </div>
+    </div> -->
     <script src="./assests/js/main.js"></script>
     <script>
       const userLi = document.getElementById("nav-user");

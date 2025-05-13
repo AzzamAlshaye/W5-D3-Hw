@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,29 +15,8 @@
     <title>Home page</title>
   </head>
   <body>
-    <!-- <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
-        <div>
-          <button
-            onclick="login()"
-            id="login-link"
-            class="btn btn-success d-none"
-          >
-            <a style="text-decoration: none; color: white" href="login.html"
-              >Login</a
-            >
-          </button>
-          <button onclick="logout()" id="logout-link" class="d-none">
-            logOut
-          </button>
-        </div>
-      </div>
-    </nav> -->
-
     <nav class="navbar navbar-expand-lg fixed-top navbar-main">
       <div class="container-fluid">
-        <!-- Navbar brand -->
         <a class="navbar-brand" href="./index.html">
           <img
             src="./assests/images/logo.webp"
@@ -45,7 +25,6 @@
           />
         </a>
 
-        <!-- Toggle button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -58,9 +37,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="">Home</a>
@@ -73,11 +50,9 @@
             </li>
           </ul>
 
-          <!-- Login/Signup or User -->
           <ul
             class="navbar-nav mb-2 mb-lg-0 d-flex flex-row flex-wrap gap-3 gap-lg-4 mt-2 mt-lg-0 align-items-center"
           >
-            <!-- Login button -->
             <li class="nav-item">
               <button
                 id="nav-login"
@@ -89,7 +64,6 @@
               </button>
             </li>
 
-            <!-- Profile display (hidden by default) -->
             <li class="nav-item d-none" id="nav-user"></li>
 
             <button onclick="logout()" id="nav-logout" class="d-none">
@@ -100,43 +74,37 @@
       </div>
     </nav>
 
-    <div class="form-div">
+    <!-- New-post form (hidden if not logged-in) -->
+    <div class="form-div py-5 mt-5" id="form-div">
       <div class="form-card">
-        <label for="">text</label>
-        <input id="li-textarea" type="text" class="input-theme" required />
-        <label for="">image</label>
-        <input id="li-image" class="input-theme" required />
-        <button class="btn-main w-100 mb-2 fw-semibold" id="submit">
+        <label for="li-textarea">Text</label>
+        <input
+          id="li-textarea"
+          type="text"
+          class="form-control mb-2"
+          required
+        />
+        <label for="li-image">Image URL</label>
+        <input id="li-image" type="url" class="form-control mb-3" required />
+        <button class="btn btn-primary w-100 mb-2 fw-semibold" id="submit">
           Submit
         </button>
       </div>
     </div>
 
-    <section>
-      <div class="container-main" id="container-main"></div>
+    <section class="container mt-4">
+      <div class="row" id="container-main"></div>
     </section>
 
-    <!-- <div class="form-div">
-      <div class="form-card">
-        <label for="">name</label>
-        <input id="li-username" class="input-theme" required />
-        <label for="">text</label>
-        <input id="li-textarea" type="text" class="input-theme" required />
-        <label for="">image</label>
-        <input id="li-image" class="input-theme" required />
-        <button class="btn-main w-100 mb-2 fw-semibold" id="btnSubmit">
-          Submit
-        </button>
-      </div>
-    </div> -->
     <script src="./assests/js/main.js"></script>
     <script>
+      // Login display logic
       const userLi = document.getElementById("nav-user");
       const u = localStorage.getItem("username");
       if (u) {
         document.getElementById("nav-logout").className =
           "btn btn-outline-light";
-        document.getElementById("nav-user").className = "d-flex";
+        document.getElementById("nav-user").className = "nav-link text-white";
         userLi.innerText = u;
       } else {
         document.getElementById("nav-login").className = "btn btn-light";
